@@ -26,7 +26,7 @@
 				line-height: 1.4;
 				font: 400 15px 'Roboto', sans-serif;
 				letter-spacing: 0.5px;
-				color: #333;	/* Font Color */
+				color: #333;				/* Font Color */
 			}
 			a{
 				outline: none;
@@ -49,7 +49,7 @@
 			
 			/* Navbar */
 			.navbar{
-				padding: 3px 16px;	/* Top-Bottom Left-Right */
+				padding: 3px 16px;			/* Top-Bottom Left-Right */
 			}
 			.navbar .navbar-nav .active{
 				font-size: 18px;
@@ -163,6 +163,116 @@
 			.col-sm-4{
 				padding-right: 30px;
 			}
+			
+			/* The Modal */
+			.modal{
+				display: none;			/* Changed to inline-flex using JavaScript */
+				position: fixed;
+				z-index: 1;
+				padding: 5px 0;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				overflow: auto;
+				background-color: rgba(0,0,0,0.8);
+			}
+			.modal-content{
+				position: relative;
+				margin: auto;
+				padding: 0;
+				width: 85%;
+				max-width: 1200px;
+				border: none;
+				background-color: transparent;
+			}
+			.my-slides{
+				text-align: center;
+			}
+			
+			/* Adjust Image Size */
+			.portrait-image{
+				height: 98vh;
+			}
+			.landscape-image{
+				width: 100%;padding-top: 35px;
+			}
+			
+			/* CLose Button */
+			.close{
+				color: #FFF;
+				position: absolute;
+				top: 10px;
+				right: 25px;
+				font-size: 48px;
+				font-weight: bold;
+				transition: 0.3s ease;
+			}
+			.close:hover, .close:focus{
+				color: #FFF;
+				text-decoration: none;
+				cursor: pointer;
+			}
+			
+			/* Next and Previous Buttons */
+			.prev, .next{
+				cursor: pointer;
+				position: absolute;
+				top: 50%;
+				width: auto;
+				padding: 16px;
+				margin-top: -50px;
+				color: #FFF !important;
+				font-weight: bold;
+				font-size: 3em;
+				transition: 0.6s ease;
+				border-radius: 0 3px 3px 0;
+				user-select: none;
+				-webkit-user-select: none;
+			}
+			
+			/* Position the Next Button to the right */
+			.next{
+				right: 0;
+				border-radius: 3px 0 0 3px;
+			}
+			
+			/* Hovering effect for Previous and Next Buttons */
+			.next:hover, .prev:hover{
+				background-color: rgba(0,0,0,0.8);
+			}
+			
+			/* Numbertext (1 / 15) */
+			.numbertext{
+				color: grey;
+				font-size: 18px;
+				font-family: Lato, sans-serif;
+				padding: 8px 50px;
+				position: absolute;
+				top: 0;
+				left: 10px;
+			}
+			
+			/* Testimonial */
+			#testimonial .container-fluid{
+				padding: 100px;
+				background-color: #C0C0BA;
+			}
+			
+			/* Carousel */
+			.carousel-inner .carousel-item .img-box{
+				width: 135px;
+				height: 135px;
+			}
+			.carousel-control-prev{
+				left: -100px;
+			}
+			.carousel-control-next{
+				right: -100px;
+			}
+			.carousel-indicators{
+				top: 250px;
+			}
 		</style>
 	</head>
 
@@ -219,7 +329,7 @@
 							<!-- Banner Text -->
 							<div class="banner-text">
 								<h2><span class="decorate">Fikri Nanda Utama</span></h2>
-								<p>Halo gan</p>
+								<p>Halo Gan</p>
 							</div>
 
 							<!-- Scroll to About Button -->
@@ -324,18 +434,240 @@
 								
 								<div class="row"><img src="img/portfolio05.jpg" class="fit-image" onClick="openModal();currentSlide(15)"></div>
 								
-							</div>
-							
+							</div>	
 						</div>
 					</div>
 				</div>
-				
 			</div>
 		</section>
 		<!-- Portfolio Section Ends -->
 		
 		<!-- Modal for Full Screen Image View Begins -->
-		
+		<div id="my-modal" class="modal">
+			
+			<!-- Close Button -->
+			<span class="close" onClick="closeModal()">&times;</span>
+			
+			<!-- Content for Modal -->
+			<div class="modal-content">
+				
+				<!-- Images for Modal (Image Viewer or Slide Show) -->
+				<div class="my-slides">
+					<div class="numbertext">1 / 15</div>
+					<img src="img/portfolio01.jpg" class="portrait-image">
+				</div>
+				
+				<div class="my-slides">
+					<div class="numbertext">2 / 15</div>
+					<img src="img/portfolio04.jpg" class="landscape-image">
+				</div>
+				
+				<div class="my-slides">
+					<div class="numbertext">3 / 15</div>
+					<img src="img/portfolio05.jpg" class="landscape-image">
+				</div>
+				
+				<div class="my-slides">
+					<div class="numbertext">4 / 15</div>
+					<img src="img/portfolio01.jpg" class="portrait-image">
+				</div>
+				
+				<div class="my-slides">
+					<div class="numbertext">5 / 15</div>
+					<img src="img/portfolio02.jpg" class="landscape-image">
+				</div>
+				
+				<div class="my-slides">
+					<div class="numbertext">6 / 15</div>
+					<img src="img/portfolio04.jpg" class="landscape-image">
+				</div>
+				
+				<div class="my-slides">
+					<div class="numbertext">7 / 15</div>
+					<img src="img/portfolio05.jpg" class="landscape-image">
+				</div>
+				
+				<div class="my-slides">
+					<div class="numbertext">8 / 15</div>
+					<img src="img/portfolio01.jpg" class="portrait-image">
+				</div>
+				
+				<div class="my-slides">
+					<div class="numbertext">9 / 15</div>
+					<img src="img/portfolio03.jpg" class="landscape-image">
+				</div>
+				
+				<div class="my-slides">
+					<div class="numbertext">10 / 15</div>
+					<img src="img/portfolio04.jpg" class="landscape-image">
+				</div>
+				
+				<div class="my-slides">
+					<div class="numbertext">11 / 15</div>
+					<img src="img/portfolio01.jpg" class="portrait-image">
+				</div>
+				
+				<div class="my-slides">
+					<div class="numbertext">12 / 15</div>
+					<img src="img/portfolio02.jpg" class="landscape-image">
+				</div>
+				
+				<div class="my-slides">
+					<div class="numbertext">13 / 15</div>
+					<img src="img/portfolio03.jpg" class="landscape-image">
+				</div>
+				
+				<div class="my-slides">
+					<div class="numbertext">14 / 15</div>
+					<img src="img/portfolio04.jpg" class="landscape-image">
+				</div>
+				
+				<div class="my-slides">
+					<div class="numbertext">15 / 15</div>
+					<img src="img/portfolio05.jpg" class="landscape-image">
+				</div>
+				
+				<!-- Next And Previous Buttons -->
+				<a class="prev" onClick="changeSlides(-1)">&#10094;</a>
+				<a class="next" onClick="changeSlides(1)">&#10095;</a>
+			</div>
+		</div>
 		<!-- Modal for Full Screen Image View Ends -->
+		
+		<!-- Section for Testimonial Begins -->
+		<section id="testimonial">
+			<div class="container-fluid">
+				<div class="row">
+					
+					<div class="col-md-12">
+						
+						<!-- Title Text -->
+						<h2 class="text-center title text-dark"><strong>About Us</strong></h2>
+						
+						<!-- Carousel Begins -->
+						<div class="carousel slide" id="my-carousel" data-ride="carousel">
+							<ol class="carousel-indicators">
+								<li data-target="#my-carousel" data-slide-to="0"></li>
+								<li data-target="#my-carousel" data-slide-to="1" class="active"></li>
+								<li data-target="#my-carousel" data-slide-to="2"></li>
+							</ol>
+							
+							<div class="carousel-inner">
+								<!-- Slide 1 -->
+								<div class="carousel-item text-center">
+									<div class="img-box border rounded-circle m-auto">
+										<img src="img/profile-1.jpg" class="d-block w-100 rounded-circle">
+									</div>
+									<h5 class="py-1 my-1"><strong class="text-warning text-uppercase">Fikri Nanda</strong></h5>
+									<h6 class="text-dark m-1">Manajemen Informatika</h6>
+									<p class="pt-3 text-white">Kelas 2D</p>
+								</div>
+								
+								<!-- Slide 2 (Active by default) -->
+								<div class="carousel-item text-center active">
+									<div class="img-box border rounded-circle m-auto">
+										<img src="img/profile-2.jpg" class="d-block w-100 rounded-circle">
+									</div>
+									<h5 class="py-1 my-1"><strong class="text-warning text-uppercase">Nanda Utama</strong></h5>
+									<h6 class="text-dark m-1">Manajemen Informatika</h6>
+									<p class="pt-3 text-white">Kelas 2D</p>
+								</div>
+								
+								<!-- Slide 3 -->
+								<div class="carousel-item text-center">
+									<div class="img-box border rounded-circle m-auto">
+										<img src="img/profile-3.jpg" class="d-block w-100 rounded-circle">
+									</div>
+									<h5 class="py-1 my-1"><strong class="text-warning text-uppercase">Nanda Utama</strong></h5>
+									<h6 class="text-dark m-1">Manajemen Informatika</h6>
+									<p class="pt-3 text-white">Kelas 2D</p>
+								</div>
+							</div>
+							
+							<!-- Carousel Controls -->
+							<a href="#my-carousel" class="carousel-control-prev" role="button" data-slide="prev">
+								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+								<span class="sr-only">Previous</span>
+							</a>
+							
+							<a href="#my-carousel" class="carousel-control-next" role="button" data-slide="next">
+								<span class="carousel-control-next-icon" aria-hidden="true"></span>
+								<span class="sr-only">Next</span>
+							</a>
+							
+						</div>
+						<!-- Carousel Ends -->
+						
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Section for Testimonial Ends -->
+		
+		
+		
+		<script type="text/javascript">
+			
+			/* Open Modal (Image Viewer or SLide Show) */
+			function openModal(){
+				/* Show Image viewer or modal when any image is clicked */
+				document.getElementById('my-modal').style.display = "inline-flex";
+				
+				/* Hide body scrollbar when modal opens up */
+				document.body.style.overflow = "hidden";
+				
+				/* Hide Navbar in Modal view */
+				document.getElementById('my-navbar').style.display = "none";
+			}
+			
+			/* Close Modal (Image Viewer) */
+			function closeModal(){
+				document.getElementById('my-modal').style.display = "none";
+				
+				/* Show body scrollbar when modal closes */
+				document.body.style.overflow = "auto";
+				
+				/* Show the navbar after modal closes */
+				document.getElementById('my-navbar').style.display = "flex";
+			}
+			
+			/* Declare variable slideIndexJS and initialise to 1 */
+			var slideIndexJS = 1;
+			
+			/* Calling function showSlides() by passing variable slideIndexJS. This will hide all the slides initially */
+			showSlides(slideIndexJS);
+			
+			/* Function to execute Next and  Previous Buttons operation */
+			function changeSlides(n){
+				showSlides(slideIndexJS += n);		/* slideIndexJS = slideIndexJS + n; */
+			}
+			
+			/* Display the image whose thumbnail is clicked */
+			function currentSlide(n){
+				showSlides(slideIndexJS = n);
+			}
+			
+			/* Main function to operate the slide show or modal or image viewer */
+			function showSlides(n){
+				var i;
+				
+				/* Get all elements with class "my-slides" */
+				var slidesJS = document.getElementsByClassName("my-slides");
+				
+				/* If the current slide index is greater than total no. of slides, then open slideIndexJS = 1 (begin with first slide after the last slide ends) */
+				if (n > slidesJS.length) { slideIndexJS = 1;}
+				
+				/* If the current slide index is less than 1, then open with slideIndexJS = last (if previous button is clicked on first slide then open last slide) */
+				if (n < 1) { slideIndexJS = slidesJS.length;}
+				
+				/* Hide all slides initially */
+				for (i = 0; i < slidesJS.length; i++){
+					slidesJS[i].style.display = "none";
+				}
+				
+				/* Show slide witch is clicked */
+				slidesJS[slideIndexJS-1].style.display = "block";
+			}
+		</script>
 	</body>
 </html>
