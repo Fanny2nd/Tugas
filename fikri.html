@@ -16,6 +16,9 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"></script>
+		
+		<!-- JavaScript Plug-In for Smooth Scroll Effect -->
+		<script type="text/javascript" src="js/jquery.smoothscroll.js"></script>
 
 		<!-- Google Fonts -->
 		<link href="https://fonts.googleapis.com/css?family=Satisfy|Questrial|Roboto" rel="stylesheet">
@@ -273,6 +276,63 @@
 			.carousel-indicators{
 				top: 250px;
 			}
+			
+			/* Contact Section */
+			.contact-sec h2{
+				font-size: 28px;
+				color: #FFF;
+				font-weight: 600;
+				padding: 15px 0;
+			}
+			.contact-sec p{
+				color: #FFF;
+				font-size: 18px;
+				padding: 16px 0 24px;
+			}
+			#contact{
+				width: 100%;
+				background-color: rgba(8,7,7,0.90);
+			}
+			section#contact div.container{
+				padding: 5%;
+			}
+			#contact .btn-primary{
+				background-color: #BE2525;
+				border: 1px solid #BE2525;
+			}
+			#contact .btn-primary:hover{
+				background-color: #721616;
+			}
+			
+			/* Footer */
+			footer{
+				padding: 40px 0;
+				background-color: #F2F3EB;
+			}
+			footer a{
+				color: #BE2525;
+			}
+			footer a:hover{
+				text-decoration: none;
+			}
+			.social-list li{
+				transition: 0.3s ease;
+				opacity: 0.5;
+				display: inline-block;		/* This will align all the fa links in one line */
+				margin-bottom: 0;
+			}
+			.social-list li a{
+				font-size: 28px;
+				margin-right: 15px;
+			}
+			.fa-angle-up{
+				font-size: 28px;
+				color: #000;
+				width: 40px;
+				border: 1px solid #000;
+				line-height: 40px;
+				border-radius: 50%;
+			}
 		</style>
 	</head>
 
@@ -329,7 +389,7 @@
 							<!-- Banner Text -->
 							<div class="banner-text">
 								<h2><span class="decorate">Fikri Nanda Utama</span></h2>
-								<p>Halo Gan</p>
+								<p>Selamat Datang</p>
 							</div>
 
 							<!-- Scroll to About Button -->
@@ -350,20 +410,20 @@
 					
 					<div class="col-md-6 text-right">
 						<h2 class="title-text">
-							Halo <br><span class="decorate">Fikri Nanda</span> Utama
+							Ini bukan template <br>Saya ketik sendiri<br><span class="decorate">Fikri Nanda</span> Utama
 						</h2>
 					</div>
 					
 					<div class="col-md-6 text-left">
 						<div class="about-text">
-							<p>Lorem Ipsum</p>
+							<p>Polinema PSDKU Kediri</p>
 							<p>&nbsp;</p>
-							<p>Lorem Ipsum</p>
+							<p>Manajemen Informatika</p>
 							<p>&nbsp;</p>
 							<ul class="about-list">
-								<li>Lorem Ipsum</li>
-								<li>Lorem Ipsum</li>
-								<li>Lorem Ipsum</li>
+								<li>SDN Sukorame 2 Kediri</li>
+								<li>SMP Negeri 4 Kediri</li>
+								<li>SMK Negeri 1 Kediri</li>
 							</ul>
 							
 						</div>
@@ -381,7 +441,7 @@
 				<div class="row">
 					<div class="col-sm-12">
 						<h2 class="title text-center">
-							Ayo <span class="decorate">Lihat</span> Saya
+							<span class="decorate">Foto</span>
 						</h2>
 					</div>
 				</div>
@@ -394,13 +454,13 @@
 							<!-- First Column -->
 							<div class="col-sm-4">
 								
-								<div class="row"><img src="img/portfolio01.jpg" class="fit-image" onClick="openModal();currentSlide(1)"></div>
+								<div class="row"><img src="IMG_20191002_115410.jpg" class="fit-image" onClick="openModal();currentSlide(1)"></div>
 								
-								<div class="row"><img src="img/portfolio04.jpg" class="fit-image" onClick="openModal();currentSlide(2)"></div>
+								<div class="row"><img src="IMG_20191002_115425.jpg" class="fit-image" onClick="openModal();currentSlide(2)"></div>
 								
 								<div class="row"><img src="img/portfolio05.jpg" class="fit-image" onClick="openModal();currentSlide(3)"></div>
 								
-								<div class="row"><img src="img/portfolio01.jpg" class="fit-image" onClick="openModal();currentSlide(4)"></div>
+								<div class="row"><img src="IMG_20191002_115410.jpg" class="fit-image" onClick="openModal();currentSlide(4)"></div>
 								
 							</div>
 							
@@ -413,7 +473,7 @@
 								
 								<div class="row"><img src="img/portfolio05.jpg" class="fit-image" onClick="openModal();currentSlide(7)"></div>
 								
-								<div class="row"><img src="img/portfolio01.jpg" class="fit-image" onClick="openModal();currentSlide(8)"></div>
+								<div class="row"><img src="IMG_20191002_115410.jpg" class="fit-image" onClick="openModal();currentSlide(8)"></div>
 								
 								<div class="row"><img src="img/portfolio03.jpg" class="fit-image" onClick="openModal();currentSlide(9)"></div>
 
@@ -424,13 +484,13 @@
 								
 								<div class="row"><img src="img/portfolio04.jpg" class="fit-image" onClick="openModal();currentSlide(10)"></div>
 								
-								<div class="row"><img src="img/portfolio01.jpg" class="fit-image" onClick="openModal();currentSlide(11)"></div>
+								<div class="row"><img src="IMG_20191002_115410.jpg" class="fit-image" onClick="openModal();currentSlide(11)"></div>
 								
 								<div class="row"><img src="img/portfolio02.jpg" class="fit-image" onClick="openModal();currentSlide(12)"></div>
 								
 								<div class="row"><img src="img/portfolio03.jpg" class="fit-image" onClick="openModal();currentSlide(13)"></div>
 								
-								<div class="row"><img src="img/portfolio02.jpg" class="fit-image" onClick="openModal();currentSlide(14)"></div>
+								<div class="row"><img src="IMG_20191002_115425.jpg" class="fit-image" onClick="openModal();currentSlide(14)"></div>
 								
 								<div class="row"><img src="img/portfolio05.jpg" class="fit-image" onClick="openModal();currentSlide(15)"></div>
 								
@@ -556,31 +616,31 @@
 								<!-- Slide 1 -->
 								<div class="carousel-item text-center">
 									<div class="img-box border rounded-circle m-auto">
-										<img src="img/profile-1.jpg" class="d-block w-100 rounded-circle">
+										<img src="fanny.jpg" class="d-block w-100 rounded-circle">
 									</div>
-									<h5 class="py-1 my-1"><strong class="text-warning text-uppercase">Fikri Nanda</strong></h5>
+									<h5 class="py-1 my-1"><strong class="text-warning text-uppercase">Fanny Bagus Ramadhan</strong></h5>
 									<h6 class="text-dark m-1">Manajemen Informatika</h6>
-									<p class="pt-3 text-white">Kelas 2D</p>
+									<p class="pt-3 text-white">1931733111</p>
 								</div>
 								
 								<!-- Slide 2 (Active by default) -->
 								<div class="carousel-item text-center active">
 									<div class="img-box border rounded-circle m-auto">
-										<img src="img/profile-2.jpg" class="d-block w-100 rounded-circle">
+										<img src="fikri.png" class="d-block w-100 rounded-circle">
 									</div>
-									<h5 class="py-1 my-1"><strong class="text-warning text-uppercase">Nanda Utama</strong></h5>
+									<h5 class="py-1 my-1"><strong class="text-warning text-uppercase">Fikri Nanda Utama</strong></h5>
 									<h6 class="text-dark m-1">Manajemen Informatika</h6>
-									<p class="pt-3 text-white">Kelas 2D</p>
+									<p class="pt-3 text-white">1931733104</p>
 								</div>
 								
 								<!-- Slide 3 -->
 								<div class="carousel-item text-center">
 									<div class="img-box border rounded-circle m-auto">
-										<img src="img/profile-3.jpg" class="d-block w-100 rounded-circle">
+										<img src="abrinsa.png" class="d-block w-100 rounded-circle">
 									</div>
-									<h5 class="py-1 my-1"><strong class="text-warning text-uppercase">Nanda Utama</strong></h5>
+									<h5 class="py-1 my-1"><strong class="text-warning text-uppercase">Virginia Abrinsa Putri</strong></h5>
 									<h6 class="text-dark m-1">Manajemen Informatika</h6>
-									<p class="pt-3 text-white">Kelas 2D</p>
+									<p class="pt-3 text-white">1931733082</p>
 								</div>
 							</div>
 							
@@ -604,9 +664,93 @@
 		</section>
 		<!-- Section for Testimonial Ends -->
 		
+		<!-- Contact Section Begins -->
+		<section class="section-padding" id="contact">
+			<div class="container">
+				
+				<!-- Title Text -->
+				<div class="contact-sec text-center">
+					<h2><span class="decorate">Ada yang ingin ditanyakan?</span></h2>
+					<p>Tanyakan saja</p>
+				</div>
+				
+				<!-- Input -->
+				<div class="container">
+					<form class="contactForm" method="post" role="form">
+						<div class="form-group">
+							<input type="text" name="name" class="form-control" placeholder="Name" data-rule="minlen:4">
+						</div>
+						
+						<div class="form-group">
+							<input type="email" name="email" class="form-control" placeholder="Email" data-rule="email">
+						</div>
+						
+						<div class="form-group">
+							<input type="text" name="Subject" class="form-control" placeholder="Subject" data-rule="minlen:4">
+						</div>
+						
+						<div class="form-group">
+							<textarea type="text" name="message" class="form-control" placeholder="Please Write Something" data-rule="required" rows="5"></textarea>
+						</div>
+						
+						<div class="text-center">
+							<button class="btn btn-primary btn-lg" type="submit">Kirim</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</section>
+		<!-- Contact Section Ends -->
 		
+		<!-- Footer -->
+		<footer class="text-center">
+			<div class="container">
+				
+				<!-- flex-warp will wrap the column to next row in small screen 
+					justify-content-center will center align the column -->
+				<div class="d-flex flex-wrap justify-content-center">
+					
+					<!-- mr-sm-auto will left align the column in sm and higher screen sizes
+						below sm, column will be center aligned because of justify-content-center class -->
+					<div class="mr-sm-auto p-2">
+						All Rights Reserved
+						<div class="credits">
+							Dibuat oleh <a href="https://www.facebook.com/nanda.619" target="_blank">Fikri Nanda</a>
+						</div>
+					</div>
+					
+					<div class="p-2">
+						<ul class="social-list">
+							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="#"><i class="fa fa-youtube"></i></a></li>
+							<li><a href="#"><i class="fa fa-instagram"></i></a></li>
+						</ul>
+					</div>
+				</div>
+				<!-- Flex Ends -->
+				
+				<div class="row text-center d-block">
+					<a href="#my-portfolio" title="To Top"><i class="fa fa-angle-up"></i></a>
+				</div>
+			</div>
+		</footer>
 		
 		<script type="text/javascript">
+			/* Smooth Scroll Effect */
+			$('html, body').smoothScroll(500);
+			
+			/* Make The Navigation Bar transparent while header image is displayed and change the color once the cover image is scrolled up */
+			var navcol = $(".navbar.navbar-dark");
+			var dark = "bg-dark";
+			var bannerimageheight = $('#home').height();
+			/* Remove the background color initially */
+			navcol.removeClass(dark);
+			/* Add the background color when the cover image is scrolled down */
+			$(window).scroll(function(){
+				if( $(this).scrollTop() > (bannerimageheight)) {navcol.addClass(dark);}
+				else { navcol.removeClass(dark);}
+			})
 			
 			/* Open Modal (Image Viewer or SLide Show) */
 			function openModal(){
